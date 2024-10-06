@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
+import { ReloadIcon } from '@radix-ui/react-icons';
 
 interface InvoiceHeaderProps {
   onReset: () => void;
+  isLoading: boolean;
 }
 
-const InvoiceHeader: React.FC<InvoiceHeaderProps> = ({ onReset }) => {
+const InvoiceHeader: React.FC<InvoiceHeaderProps> = ({ onReset, isLoading }) => {
   return (
     <section className="mb-8 flex items-center justify-between">
       <div>
@@ -19,7 +21,9 @@ const InvoiceHeader: React.FC<InvoiceHeaderProps> = ({ onReset }) => {
           Reset
         </Button>
 
-        <Button type="submit">Save</Button>
+        <Button type="submit">
+          {isLoading ? <ReloadIcon className="h-6 w-6 animate-spin" /> : 'Save'}
+        </Button>
       </div>
     </section>
   );
