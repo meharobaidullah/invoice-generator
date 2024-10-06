@@ -74,13 +74,13 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ form }) => {
   };
 
   return (
-    <Card className="bg-[#F5F5F5]">
+    <Card className="bg-card-background border-none">
       <CardHeader>
         <CardTitle className="text-2xl">Preview</CardTitle>
       </CardHeader>
 
       <CardContent>
-        <Card>
+        <Card className="shadow-previewCard drop-shadow-previewCard border-none">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">New Invoice</CardTitle>
           </CardHeader>
@@ -140,22 +140,22 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ form }) => {
             </div>
 
             <div className="grid grid-cols-1">
-              <Table>
-                <TableHeader className="bg-[#F5F5F5]">
-                  <TableRow>
-                    <TableHead>Item</TableHead>
+              <Table className="rounded-sm">
+                <TableHeader>
+                  <TableRow className="border-none">
+                    <TableHead className="rounded-bl-sm rounded-tl-sm"> Item</TableHead>
                     <TableHead>Qty.</TableHead>
                     <TableHead>Price</TableHead>
-                    <TableHead className="text-right">Total</TableHead>
+                    <TableHead className="rounded-br-sm rounded-tr-sm text-right">Total</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {items.map((item, index) => (
                     <TableRow key={index}>
-                      <TableCell>{item.name}</TableCell>
+                      <TableCell className="rounded-bl-sm rounded-tl-sm">{item.name}</TableCell>
                       <TableCell>{item.quantity}</TableCell>
                       <TableCell>{item.price ? `$ ${item.price}` : ''}</TableCell>
-                      <TableCell className="text-right">
+                      <TableCell className="rounded-br-sm rounded-tr-sm text-right">
                         $ {calculateItemTotal(item).toFixed(2)}
                       </TableCell>
                     </TableRow>

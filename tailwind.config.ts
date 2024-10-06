@@ -16,6 +16,7 @@ const config: Config = {
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
+          background: 'hsl(var(--card-background))',
           foreground: 'hsl(var(--card-foreground))',
         },
         popover: {
@@ -63,6 +64,13 @@ const config: Config = {
       },
       lineHeight: {
         9.5: '2.375rem',
+      },
+      boxShadow: {
+        input: '0px 1px 2px 0px #1018280D',
+        previewCard: ' 0px 20px 24px -4px #10182814',
+      },
+      dropShadow: {
+        previewCard: '0px 8px 8px -4px #10182808',
       },
     },
     plugins: [tailwindcssAnimate],
