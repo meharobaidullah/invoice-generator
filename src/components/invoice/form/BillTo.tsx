@@ -13,7 +13,7 @@ interface BillToSectionProps {
 const BillToSection: React.FC<BillToSectionProps> = ({ form }) => {
   return (
     <div className="space-y-4">
-      <h3 className="text-2xl font-semibold leading-[38px] tracking-normal">Bill To</h3>
+      <h3 className="leading-9.5 text-2xl font-semibold tracking-normal">Bill To</h3>
 
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-6">

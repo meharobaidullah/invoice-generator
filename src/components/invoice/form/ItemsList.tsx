@@ -46,7 +46,7 @@ const ItemsList: React.FC<ItemsListProps> = ({ form }) => {
 
   return (
     <div className="flex flex-col space-y-1.5">
-      <h3 className="text-2xl font-semibold leading-[38px] tracking-normal">Items List</h3>
+      <h3 className="leading-9.5 text-2xl font-semibold tracking-normal">Items List</h3>
 
       <div className="flex flex-col space-y-4">
         {itemFields.map((field, index) => (

@@ -61,6 +61,9 @@ const config: Config = {
       fontFamily: {
         inter: ['var(--font-inter)', ...fontFamily.sans],
       },
+      lineHeight: {
+        9.5: '2.375rem',
+      },
     },
     plugins: [tailwindcssAnimate],
   },
